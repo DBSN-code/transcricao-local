@@ -1,0 +1,38 @@
+{
+  "dmg": "Transcricao-Local-1.1.0-arm64.dmg",
+  "sha256": "6a9c861e4c4400929537db4ffc0d715406cde064a0998941fd7292e41acf32e2",
+  "architecture": "arm64",
+  "minimum_macos": "27.0",
+  "notarized": false,
+  "tests": {
+    "dmg_mount_readonly": true,
+    "cannot_start_from_installation_disk": true,
+    "no_project_path_in_info": true,
+    "relocated_signature": true,
+    "fixture_and_corresponding_sources_present": true,
+    "native_portuguese_model": true,
+    "no_homebrew_or_user_dylib_dependencies": 51,
+    "frozen_server_with_system_only_path": true,
+    "graceful_shutdown": true
+  },
+  "synthetic_formats": {
+    "wav": {
+      "passed": true,
+      "text": "Olá, esta é uma mensagem de teste em português. A transcrição funciona no meu computador."
+    },
+    "ogg": {
+      "passed": true,
+      "text": "Olá, esta é uma mensagem de teste em português. A transcrição funciona no meu computador."
+    },
+    "webm": {
+      "passed": true,
+      "text": "Olá, esta é uma mensagem de teste em português. A transcrição funciona no meu computador."
+    }
+  },
+  "limits": [
+    "second_mac_not_tested",
+    "quarantined_download_not_tested",
+    "first_model_download_not_tested",
+    "login_restart_not_tested"
+  ]
+}

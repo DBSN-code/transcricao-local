@@ -1,0 +1,66 @@
+TRANSCRIÇÃO LOCAL — 1.1.0
+
+REQUISITOS
+Mac com chip Apple M1 ou superior e macOS 27.
+Chrome com a extensão WA Plus a Mais instalada separadamente.
+O modelo de português da Apple precisa estar disponível no Mac.
+
+INSTALAÇÃO
+1. Abra o arquivo Transcricao-Local-1.1.0-arm64.dmg.
+2. Arraste Transcrição Local para a pasta Aplicativos dentro dessa janela.
+   Também é possível usar a pasta Aplicativos do seu usuário, sem acesso de administrador.
+3. Ejete o disco de instalação e abra Transcrição Local em Aplicativos.
+4. Se aparecer Preparar português, clique e aguarde. O download inicial usa
+   internet e pode levar alguns minutos. Os áudios são transcritos no próprio Mac.
+5. Clique Iniciar servidor e depois Testar transcrição.
+
+Não é necessário instalar Python, Homebrew, FFmpeg ou Xcode.
+O disco não contém conversas, áudios pessoais, chaves de API nem histórico.
+Ele inclui apenas um áudio sintético de exemplo para o botão Testar transcrição.
+
+AUTORIZAÇÃO DO MACOS
+Esta versão tem assinatura local; ainda não tem assinatura de desenvolvedor
+e notarização da Apple. Ao receber pela internet, o macOS pode impedir a primeira
+abertura. Se você conhece e confia em quem enviou, depois da tentativa abra
+Ajustes do Sistema > Privacidade e Segurança > Abrir Mesmo Assim para ESTE app.
+Não desative o Gatekeeper nem altere as proteções globais do Mac.
+Orientação oficial: https://support.apple.com/pt-br/102445
+
+CONFIGURAÇÃO DA EXTENSÃO NO CHROME
+Serviço: Servidor compatível com OpenAI
+Endereço: http://127.0.0.1:5092/v1
+Modelo: apple-speechanalyzer
+Chave do servidor: deixe em branco
+Idioma: Português
+Salve a configuração e use o botão de transcrição em um áudio no WhatsApp Web.
+Este instalador não instala nem modifica a extensão.
+
+FUNCIONAMENTO
+Fechar a janela mantém o aplicativo na barra de menus.
+Sair do aplicativo mantém o servidor no estado atual.
+Parar servidor interrompe seu funcionamento. Durante uma transcrição, aguarde
+terminar para solicitar a parada.
+Iniciar o servidor ao entrar no Mac é opcional e independente de ligar/parar agora.
+Essa opção inicia o servidor, sem abrir a janela do aplicativo.
+O servidor recebe um áudio por vez, até 25 MB e 30 minutos.
+Ele fica disponível apenas neste computador, sem acesso pela rede local.
+
+ATUALIZAÇÃO E REMOÇÃO
+Antes de substituir ou mover o app: pare o servidor, desative o início automático
+e saia do aplicativo. Depois copie a nova versão, abra e configure novamente.
+Se uma versão antiga ainda controla o serviço, faça esses passos nela primeiro.
+Para remover: pare o servidor, desative o início automático, saia e mova o app
+para o Lixo. Dados técnicos ficam em ~/Library/Application Support/Transcricao Local;
+essa pasta não guarda áudios nem transcrições pessoais.
+
+COMPONENTES
+Fontes e licenças de componentes acompanham o app em Contents/Resources/Licenses
+e Contents/Resources/Sources. FFmpeg 9.0.2 é um executável separado, compilado
+sem componentes GPL/nonfree. Suas fontes originais e a receita de compilação
+estão incluídas. Para modificá-lo, recompile essas fontes, substitua o executável
+em Contents/Helpers/wa-backend.app/Contents/Frameworks/bin/ffmpeg e reassine sua cópia do app.
+Não há proibição de examinar ou modificar esses componentes conforme suas licenças.
+
+Esta versão foi testada localmente em macOS 27. A instalação em um segundo Mac,
+a autorização após download e o primeiro download do modelo ainda precisam ser
+confirmados no computador de destino.
